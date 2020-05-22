@@ -1,7 +1,7 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
-set tabstop=1 softtabstop=0 expandtab shiftwidth=2 smarttab mouse=a
+set tabstop=1 softtabstop=0 expandtab shiftwidth=2 smarttab
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -12,7 +12,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
-Plugin 'joonty/vdebug'
+Plugin 'vim-vdebug/vdebug'
 Plugin 'vim-airline/vim-airline'
 Plugin 'pangloss/vim-javascript'
 Plugin 'mattn/emmet-vim'
@@ -21,6 +21,8 @@ Plugin 'junegunn/goyo.vim'
 Plugin 'mxw/vim-jsx'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-session'
+Plugin 'lumiliet/vim-twig'
+Plugin 'mustache/vim-mustache-handlebars'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required

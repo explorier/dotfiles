@@ -126,3 +126,4 @@ fi
 #export DOCKER=/usr/share/kalabox/bin/docker
 
 export PATH="$HOME/.composer/vendor/bin:$PATH"
+alias terminus="/opt/vendor/pantheon-systems/terminus/bin/terminus"
