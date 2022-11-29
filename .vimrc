@@ -25,17 +25,25 @@ Plugin 'lumiliet/vim-twig'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
-Plugin 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+Plugin 'github/copilot.vim'
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-css',
   \ 'coc-tailwindcss',
   \ 'coc-styled-components',
-  \ 'coc-solargraph'
+  \ 'coc-solargraph',
+  \ 'coc-stylelint',
   \ ]
 "todo: migrate to using prettier & eslint with coc
 "https://thoughtbot.com/blog/modern-typescript-and-react-development-in-vim
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
+endif
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -63,15 +71,6 @@ autocmd! User GoyoLeave Limelight!
 
 let g:session_autosave = 'yes'
 let g:session_autoload = 'yes'
-
-" that options below must be used together for execute prettier on autosave without "@Format" or "@prettier" tags.
-
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
-
-"Or for autoformating only when you have config file in directory or parent.
-"let g:prettier#autoformat_config_present = 1
-"let g:prettier#autoformat_require_pragma = 0
 
 hi VertSplit ctermfg=1 ctermbg=NONE cterm=NONE ctermfg=magenta
 set fillchars+=vert:•
@@ -243,3 +242,5 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 set hlsearch
 hi Search ctermbg=Black
+highlight CocFloating ctermbg=Black
+highlight CocErrorFloat ctermfg=Magenta
