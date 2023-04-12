@@ -34,6 +34,7 @@ let g:coc_global_extensions = [
   \ 'coc-styled-components',
   \ 'coc-solargraph',
   \ 'coc-stylelint',
+  \ 'coc-phpls',
   \ ]
 "todo: migrate to using prettier & eslint with coc
 "https://thoughtbot.com/blog/modern-typescript-and-react-development-in-vim
