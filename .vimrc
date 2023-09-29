@@ -62,7 +62,7 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 " 
 syntax on
-
+set re=0
 
 " Color name (:help cterm-colors) or ANSI code
 let g:limelight_conceal_ctermfg = 'gray'
