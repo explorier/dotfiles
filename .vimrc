@@ -74,7 +74,7 @@ let g:session_autosave = 'yes'
 let g:session_autoload = 'yes'
 
 hi VertSplit ctermfg=1 ctermbg=NONE cterm=NONE ctermfg=magenta
-set fillchars+=vert:•
+set fillchars+=vert:\|
 
 "COC Stuff
 " TextEdit might fail if hidden is not set.
