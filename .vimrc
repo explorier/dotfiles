@@ -245,3 +245,5 @@ set hlsearch
 hi Search ctermbg=Black
 highlight CocFloating ctermbg=Black
 highlight CocErrorFloat ctermfg=Magenta
+highlight SignColumn ctermbg=Black
+
