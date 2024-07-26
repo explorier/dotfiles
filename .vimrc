@@ -26,7 +26,7 @@ Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plugin 'junegunn/fzf.vim'
 Plugin 'neoclide/coc.nvim', {'branch': 'release'}
-Plugin 'github/copilot.vim'
+Plugin 'ghifarit53/tokyonight-vim'
 let g:coc_global_extensions = [
   \ 'coc-tsserver',
   \ 'coc-css',
@@ -241,9 +241,17 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 "remap carriage return for tab auto import to work
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
-set hlsearch
-hi Search ctermbg=Black
-highlight CocFloating ctermbg=Black
-highlight CocErrorFloat ctermfg=Magenta
-highlight SignColumn ctermbg=Black
+" Enable line numbers
+set number
 
+set hlsearch
+
+set termguicolors
+
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 0
+let g:tokyonight_disable_italic_comment = 1
+
+colorscheme tokyonight
+let g:airline_theme = "tokyonight"
+let g:tokyonight_transparent_background = 1

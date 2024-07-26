@@ -3,10 +3,12 @@ import = [
 ]
 
 [font]
-size = 14.0
+normal.family = "MesloLGS NF"
+bold.family = "MesloLGS NF"
+italic.family = "MesloLGS NF"
+bold_italic.family = "MesloLGS NF"
 
-[font.normal]
-family = "MesloLGS NF"
+size = 14.0
 
 [scrolling]
 history = 10000
